@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+  .container { display: grid; grid-template-columns: 3fr 1fr; height: 100vh; }
+  .game-view { background-color: #222; color: white; padding: 10px; position: relative; }
+  .sidebar { display: flex; flex-direction: column; background-color: #f0f0f0; }
+  .ai-panel { flex: 2; padding: 15px; overflow-y: auto; border-bottom: 1px solid #ccc; }
+  .controls { padding: 15px; }
+  .status-bar { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: #0f0; padding: 8px; font-family: monospace; font-size: 12px; }
+  .message { margin-bottom: 10px; padding: 10px; background: white; border-radius: 5px; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+  .voice-controls { display: flex; align-items: center; margin-top: 10px; }
+  button { background: #4285f4; color: white; border: none; padding: 8px 15px; margin-right: 10px; border-radius: 4px; cursor: pointer; }
+  button:hover { background: #3b78e7; }
+  .game-placeholder { height: 70%; display: flex; justify-content: center; align-items: center; border: 2px dashed #444; margin: 20px; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="game-view">
+      <div class="game-placeholder">
+        <div>GODOT GAME VIEWPORT</div>
+      </div>
+      <div class="player-controls">
+        <button>Move</button>
+        <button>Interact</button>
+        <button>Inventory</button>
+      </div>
+      <div class="status-bar">
+        Status: Connected to Vertex AI | Voice API: Ready | FPS: 60
+      </div>
+    </div>
+    
+    <div class="sidebar">
+      <div class="ai-panel">
+        <h3>AI Interactions</h3>
+        <div class="message">
+          <strong>Gemini:</strong> Hello there! Welcome to VA1-HA11A! What can I get you this fine evening?
+          <div class="voice-controls">
+            <button>🔊 Play</button>
+            <span>Voice generation: Complete</span>
+          </div>
+        </div>
+        <div class="message">
+          <strong>User:</strong> Could I please have a virgin mojito or a sparkling lemonade?
+          <div class="voice-controls">
+            <button>🔊 Play</button>
+            <span>Voice generation: Complete</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="controls">
+        <h3>AI Settings</h3>
+        <div>
+          <label>AI Response Mode:</label>
+          <select>
+            <option>Helpful Guide</option>
+            <option>Game Narrator</option>
+            <option>Character Role-play</option>
+          </select>
+        </div>
+        <div style="margin-top: 15px;">
+          <label>Voice Settings:</label>
+          <select>
+            <option>Male Voice 1</option>
+            <option>Female Voice 2</option>
+            <option>Neutral Voice</option>
+          </select>
+        </div>
+        <div style="margin-top: 15px;">
+          <button>Debug Console</button>
+          <button>Reset AI State</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
